@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Maps.MapControl.WPF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +25,24 @@ namespace BingMaps
         {
             InitializeComponent();
         }
+
+        void Windows_Loaded(object sender, RoutedEventArgs e)
+        {
+            map.Center = new Location(latitude: -22.761871, longitude: -47.396942);
+            map.ZoomLevel = 14;
+        }
+
+        void Configuracoes_Click(object sender, RoutedEventArgs e)
+        {
+            if (!modalConfiguracoes.IsVisible)
+            {
+                modalConfiguracoes.Visibility = Visibility;
+            }
+            else
+            {
+                modalConfiguracoes.Visibility = Visibility.Collapsed;
+            }
+        }
+
     }
 }

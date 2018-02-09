@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BingMaps"
         xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="480" Width="960">
+        Title="MainWindow" Height="480" Width="960" Loaded="Windows_Loaded">
     <Grid>
 
         <!-- Install Microsoft.Maps.MapControl.WPF -->
@@ -24,7 +24,7 @@
 
         <m:Map x:Name="map" Grid.ColumnSpan="3" Grid.RowSpan="3" CredentialsProvider="CredentialsHere" ScaleVisibility="Hidden" AnimationLevel="Full"></m:Map>
 
-        <Grid Background="#E1E8ED" Grid.ColumnSpan="3" Opacity="0.7">
+        <Grid Background="#E1E8ED" Grid.ColumnSpan="3">
             <TextBlock Margin="10" VerticalAlignment="Center" Text="Title" />
         </Grid>
 
@@ -32,11 +32,11 @@
             <StackPanel>
                 <Button Height="50" Content="button" Background="#FFE1E8ED" BorderBrush="#FFE1E8ED" />
                 <Button Height="50" Content="button" Background="#FFE1E8ED" BorderBrush="#FFE1E8ED" />
-                <Button Height="50" Content="Configurações" Background="#FFE1E8ED" BorderBrush="#FFE1E8ED" />
+                <Button Height="50" Content="Configurações" Background="#FFE1E8ED" BorderBrush="#FFE1E8ED" Click="Configuracoes_Click" />
             </StackPanel>
         </Grid>
 
-        <Grid x:Name="modalConfiguracoes" Background="#E1E8ED" Grid.Column="1" Grid.Row="1">
+        <Grid x:Name="modalConfiguracoes" Background="#E1E8ED" Grid.Column="1" Grid.Row="1" Visibility="Collapsed">
 
             <ScrollViewer>
                 <StackPanel Margin="10">
