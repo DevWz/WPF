@@ -10,7 +10,7 @@ namespace BindingAsync.Controllers
     {
         internal Task<string> AlgoAsync()
         {
-            return Task.Run(() => { return "Hellor World"; });
+            return Task.Run(() => { return "Hello World"; });
         }
     }
 }

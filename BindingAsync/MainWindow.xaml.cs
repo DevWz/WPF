@@ -58,7 +58,9 @@ namespace BindingAsync
             Propriedade = await manager.AlgoAsync();
         }
 
-        
-
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            FazAlgo();
+        }
     }
 }
