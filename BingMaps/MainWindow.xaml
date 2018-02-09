@@ -4,9 +4,61 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BingMaps"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="480" Width="960">
     <Grid>
+
+        <!-- Install Microsoft.Maps.MapControl.WPF -->
         
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140" />
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <m:Map x:Name="map" Grid.ColumnSpan="3" Grid.RowSpan="3" CredentialsProvider="CredentialsHere" ScaleVisibility="Hidden" AnimationLevel="Full"></m:Map>
+
+        <Grid Background="#E1E8ED" Grid.ColumnSpan="3" Opacity="0.7">
+            <TextBlock Margin="10" VerticalAlignment="Center" Text="Title" />
+        </Grid>
+
+        <Grid Background="#E1E8ED" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2">
+            <StackPanel>
+                <Button Height="50" Content="button" Background="#FFE1E8ED" BorderBrush="#FFE1E8ED" />
+                <Button Height="50" Content="button" Background="#FFE1E8ED" BorderBrush="#FFE1E8ED" />
+                <Button Height="50" Content="Configurações" Background="#FFE1E8ED" BorderBrush="#FFE1E8ED" />
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="modalConfiguracoes" Background="#E1E8ED" Grid.Column="1" Grid.Row="1">
+
+            <ScrollViewer>
+                <StackPanel Margin="10">
+
+                    <TextBlock Text="Configurações" />
+
+                    <TextBlock Margin="10,10,10,0" Text="Componente" />
+                    <TextBlock Margin="20,10,20,0" Text="Propriedade" />
+                    <ComboBox Margin="20,0,20,0">
+                        <ComboBoxItem Content="Valor" IsSelected="True" />
+                        <ComboBoxItem Content="Valor" />
+                    </ComboBox>
+                    <TextBlock Margin="20,10,20,0" Text="Propriedade" />
+                    <ComboBox Margin="20,0,20,0">
+                        <ComboBoxItem Content="Valor" IsSelected="True" />
+                        <ComboBoxItem Content="Valor" />
+                    </ComboBox>
+
+                </StackPanel>
+            </ScrollViewer>
+
+        </Grid>
+
     </Grid>
 </Window>
