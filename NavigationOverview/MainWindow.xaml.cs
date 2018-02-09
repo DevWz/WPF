@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using NavigationOverview.Views;
+
+// Tutorial do NavigationOverview
+// https://docs.microsoft.com/en-us/dotnet/framework/wpf/app-development/navigation-overview
 
 namespace NavigationOverview
 {
@@ -24,5 +28,16 @@ namespace NavigationOverview
         {
             InitializeComponent();
         }
+
+        void Button_Click_View1(object sender, RoutedEventArgs e)
+        {
+            Nav.Navigate(new View1());
+        }
+
+        void Button_Click_View2(object sender, RoutedEventArgs e)
+        {
+            Nav.Navigate(new View2("I'm a param"));
+        }
+
     }
 }

@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Button Height="50" Content="btn View 1" Click="Button_Click_View1" />
+            <Button Height="50" Content="btn View 2" Click="Button_Click_View2" />
+        </StackPanel>
+
+        <Frame x:Name="Nav" Grid.Column="1" Source="Views/View1.XAML" NavigationUIVisibility="Hidden" />
+
     </Grid>
 </Window>
